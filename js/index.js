@@ -51,6 +51,19 @@ for (let i = 0; i < anchors.length - 1; i++){
   anchor[i].textContent = anchors[i];
 }
 
+anchor.forEach(elem => elem.style.color = 'green');
+
+const nav = document.querySelector('nav');
+const newA = document.createElement('a');
+const newAA = document.createElement('a');
+newA.textContent = 'Appended Child';
+newAA.textContent = "Prepended Child";
+nav.append(newA);
+nav.prepend(newAA);
+newA.style.color = 'green';
+newAA.style.color = 'green';
+
+
 const header = document.querySelector('.cta-text h1')
 header.textContent = siteContent['cta']['h1'];
 
@@ -92,6 +105,8 @@ for (let i=0; i < contact.length; i++){
 
 const footer = document.querySelector('footer');
 footer.textContent = siteContent['footer']['copyright'];
+
+
 
 
 
