@@ -40,3 +40,61 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const anchor = document.querySelectorAll('a');
+console.log(anchor);
+
+const anchors = Object.values(siteContent['nav']);
+console.log(anchors);
+
+for (let i = 0; i < anchors.length - 1; i++){
+  anchor[i].textContent = anchors[i];
+}
+
+const header = document.querySelector('.cta-text h1')
+header.textContent = siteContent['cta']['h1'];
+
+const button = document.querySelector('.cta-text button');
+button.textContent = siteContent['cta']['button'];
+
+const img1 = document.querySelector('#cta-img');
+img1.src = siteContent['cta']['img-src'];
+
+const h4 = document.querySelectorAll('.text-content h4');
+console.log(h4);
+
+h4[0].textContent = siteContent['main-content']['features-h4'];
+h4[1].textContent = siteContent['main-content']['about-h4'];
+h4[2].textContent = siteContent['main-content']['services-h4'];
+h4[3].textContent = siteContent['main-content']['product-h4'];
+h4[4].textContent = siteContent['main-content']['vision-h4'];
+
+const p = document.querySelectorAll('.text-content p');
+
+p[0].textContent = siteContent['main-content']['features-content'];
+p[1].textContent = siteContent['main-content']['about-content'];
+p[2].textContent = siteContent['main-content']['services-content'];
+p[3].textContent = siteContent['main-content']['product-content'];
+p[4].textContent = siteContent['main-content']['vision-content'];
+
+const img2 = document.querySelector('.middle-img');
+img2.src = siteContent['main-content']['middle-img-src'];
+
+const contact = Array.from(document.querySelector('.contact').children)
+console.log(contact);
+
+const contactValues = Object.values(siteContent['contact']);
+console.log(contactValues); 
+
+for (let i=0; i < contact.length; i++){
+  contact[i].textContent = contactValues[i];
+}
+
+const footer = document.querySelector('footer');
+footer.textContent = siteContent['footer']['copyright'];
+
+
+
+
+
+
