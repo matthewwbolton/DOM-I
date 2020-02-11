@@ -66,9 +66,16 @@ newAA.style.color = 'green';
 
 const header = document.querySelector('.cta-text h1')
 header.textContent = siteContent['cta']['h1'];
+header.style.color = 'limeGreen';
 
 const button = document.querySelector('.cta-text button');
 button.textContent = siteContent['cta']['button'];
+button.style.color = 'limegreen';
+button.style.backgroundColor = 'yellow';
+button.setAttribute.href = 'https://learn.lambdaschool.com/web2/module/recJWv3RIfa4NFXbn/';
+button.addEventListener('click', function(){
+  location = "https://learn.lambdaschool.com/web2/module/recJWv3RIfa4NFXbn/";
+});
 
 const img1 = document.querySelector('#cta-img');
 img1.src = siteContent['cta']['img-src'];
